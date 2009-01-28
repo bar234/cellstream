@@ -1,5 +1,10 @@
 View http://www.cs.vt.edu/~bar234/cellstream for a technical report on CellStream.
 
+To run CellStream, compile a binary and run it as follows:
+	diskio <# spes> <dma block size>
+	
+	e.g. diskio 4 4096
+	
 CellStream is an application for the Cell Broadband Engine that moves data from 
 an external storage quickly and efficiently between SPEs and memory and back out 
 to a storage device. It also supports a drop in kernel on the SPEs so some work 
