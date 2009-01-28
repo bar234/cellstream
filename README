@@ -1,0 +1,13 @@
+View http://www.cs.vt.edu/~bar234/cellstream for a technical report on CellStream.
+
+CellStream is an application for the Cell Broadband Engine that moves data from 
+an external storage quickly and efficiently between SPEs and memory and back out 
+to a storage device. It also supports a drop in kernel on the SPEs so some work 
+can be done on the data as it is streamed through the SPEs.
+
+It has been used as a test application comparing various programming models on 
+multi-core processors with explicitly managed memory hierarchies (such as the 
+Cell BE). In that paper, it was designed to compare how efficient each programming 
+model was at streaming data to the SPEs. Since the handwritten version of 
+CellStream is able to perform at close to peak speeds, it was a good indicator 
+of the overhead introduced with the different programming models.
