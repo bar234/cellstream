@@ -60,8 +60,8 @@ void offloadBuffer(void* buffer, int size, int spes) {
 	
 	unsigned int bufferChunk = size / spes;				// Break the buffer into one piece per SPE
 
-	unsigned int chunkOffset = bufferChunk % 4096;		// Make each piece a multiple of 4k to keep SPEs
-														// from sharing pages (causes a lot of slowdown).
+	unsigned int chunkOffset = bufferChunk % 128;		// Make each piece a multiple of 128 to make sure SPEs
+														// read whole cache lines.
 
 	unsigned int bufferOffset;							// Size of the last SPE's work to compensate for the
 														// adjusted piece size in the other SPEs
